@@ -56,7 +56,6 @@ public class RegistroPacientes extends javax.swing.JFrame {
         txt_buscar = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         btn_eliminar = new javax.swing.JButton();
-        btn_modificar = new javax.swing.JButton();
         btn_buscar1 = new javax.swing.JButton();
         btn_medico = new javax.swing.JButton();
         btn_limpiar = new javax.swing.JButton();
@@ -140,11 +139,9 @@ public class RegistroPacientes extends javax.swing.JFrame {
         jLabel12.setText("Parametro de busqueda");
 
         btn_eliminar.setText("Eliminar");
-
-        btn_modificar.setText("Modificar");
-        btn_modificar.addActionListener(new java.awt.event.ActionListener() {
+        btn_eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_modificarActionPerformed(evt);
+                btn_eliminarActionPerformed(evt);
             }
         });
 
@@ -228,11 +225,9 @@ public class RegistroPacientes extends javax.swing.JFrame {
                             .addComponent(jLabel10))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_limpiar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btn_registro)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btn_modificar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btn_eliminar)
                         .addContainerGap())
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -248,16 +243,14 @@ public class RegistroPacientes extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(txt_codigo))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(txt_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11)
+                        .addComponent(txt_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -282,7 +275,6 @@ public class RegistroPacientes extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(txt_lugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_modificar)
                     .addComponent(btn_eliminar)
                     .addComponent(btn_registro)
                     .addComponent(btn_limpiar))
@@ -303,16 +295,13 @@ public class RegistroPacientes extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -401,6 +390,7 @@ public class RegistroPacientes extends javax.swing.JFrame {
             txa_motivo.setText("");
             txt_doctor.setText("");
             txt_lugar.setText("");
+            txt_buscar.setText("");
             
             JOptionPane.showMessageDialog(null, "Paciente Registrado Correctamente.");
             
@@ -413,10 +403,6 @@ public class RegistroPacientes extends javax.swing.JFrame {
     private void txt_fechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_fechaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_fechaActionPerformed
-
-    private void btn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_modificarActionPerformed
 
     private void btn_buscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscar1ActionPerformed
         
@@ -479,8 +465,51 @@ public class RegistroPacientes extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_medicoActionPerformed
 
     private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
-        // TODO add your handling code here:
+        
+        try{
+            txt_codigo.setText("");
+            txt_fecha.setText("");
+            txt_nombre.setText("");
+            txt_apellido.setText("");
+            txt_sexo.setText("");
+            txt_direccion.setText("");
+            txa_motivo.setText("");
+            txt_doctor.setText("");
+            txt_lugar.setText("");
+            txt_buscar.setText("");
+        }catch(Exception e){
+            
+        }
+        
     }//GEN-LAST:event_btn_limpiarActionPerformed
+
+    private void btn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarActionPerformed
+        
+        try{            
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/bd_salud", "root", "");
+            PreparedStatement pst = cn.prepareStatement("delete from informacionpacientes where Codigo = ?");
+            
+            pst.setString(1, txt_codigo.getText().trim());
+            pst.executeUpdate();
+            
+            txt_codigo.setText("");
+            txt_fecha.setText("");
+            txt_nombre.setText("");
+            txt_apellido.setText("");
+            txt_sexo.setText("");
+            txt_direccion.setText("");
+            txa_motivo.setText("");
+            txt_doctor.setText("");
+            txt_lugar.setText("");
+            txt_buscar.setText("");
+            
+            JOptionPane.showMessageDialog(null, "Eliminacion Exitosa.");
+            
+        }catch(Exception e){
+            
+        }
+        
+    }//GEN-LAST:event_btn_eliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -522,7 +551,6 @@ public class RegistroPacientes extends javax.swing.JFrame {
     private javax.swing.JButton btn_eliminar;
     private javax.swing.JButton btn_limpiar;
     private javax.swing.JButton btn_medico;
-    private javax.swing.JButton btn_modificar;
     private javax.swing.JButton btn_paciente;
     private javax.swing.JButton btn_registro;
     private javax.swing.JLabel jLabel1;
