@@ -1,8 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    Brayan Stiven Cruz Aguilar
+    Grupo: 302 
+    Programacion 2
+*/
 package ventanas;
 import java.sql.*;
 import javax.swing.JOptionPane;
