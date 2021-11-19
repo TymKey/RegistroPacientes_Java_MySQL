@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2021 a las 04:46:51
+-- Tiempo de generación: 19-11-2021 a las 12:19:10
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 8.0.6
 
@@ -41,6 +41,14 @@ CREATE TABLE `informacionpacientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci COMMENT='Tabla para registrar la información de los pacientes.';
 
 --
+-- Volcado de datos para la tabla `informacionpacientes`
+--
+
+INSERT INTO `informacionpacientes` (`ID`, `Codigo`, `Fecha`, `NombrePacientes`, `ApellidoPacientes`, `Sexo`, `Direccion`, `Motivo`, `Medico`, `Atencion`) VALUES
+(8, '3312', '21 de julio de 2000', 'juan andres', 'alfoso perez', 'masculino', 'calle 8 # 13 c 22', 'Medicina general', 'raul muñoz', 'hospital universitario'),
+(9, '3313', '23 de febrero 2002', 'freddy esteban', 'cruz sanchez', 'masculino', 'calle 23 B # 17 B 18', 'Nutricionista', 'bryan aguilar', 'clinica marly');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -58,7 +66,7 @@ ALTER TABLE `informacionpacientes`
 -- AUTO_INCREMENT de la tabla `informacionpacientes`
 --
 ALTER TABLE `informacionpacientes`
-  MODIFY `ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
