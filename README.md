@@ -26,3 +26,17 @@ Es un lenguaje para visualizar los elementos de un gran sistema facilitando, la 
   * **Relaciones:** atraves de estas acciones los elementos pueden relacionarse, hacer que los sistemas tengan funcionalidad, que adquieran vida.
   
   * **Diseños:** reflejan graficamente el comportamiento.
+
+# Algunos de los diagramas son:
+
+ * **Diagrama de Clases**
+
+<p>
+  <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/chart/class-diagram-for-ATM-system-UML/Class-Diagram-ATM-system-750x660.png" width="500">
+</p>
+
+* **Diagrama de Actividades**
+
+<p>
+  <img src="https://www.researchgate.net/profile/Jorge-E-Posada-P/publication/326207598/figure/fig4/AS:645015223152642@1530795021437/Figura-6-Ejemplo-de-Diagrama-de-Actividad.png" width="500">
+</p>
